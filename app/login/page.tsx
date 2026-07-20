@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { useLogoUrl } from "@/components/DesignSystemProvider";
 
 export default function LoginPage() {
+  const logoUrl = useLogoUrl("on-black");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -40,7 +41,8 @@ export default function LoginPage() {
     <main className="min-h-screen bg-off-black flex flex-col items-center justify-center px-6">
       <div className="w-full max-w-sm">
         <div className="mb-10 flex justify-center">
-          <Image src="/logos/gwi-logo-on-black.svg" alt="GWI" width={84} height={26} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoUrl} alt="GWI" width={84} height={26} />
         </div>
 
         <h1 className="text-white text-3xl font-bold tracking-tight mb-2 text-center">

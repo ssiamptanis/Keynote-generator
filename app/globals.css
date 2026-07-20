@@ -2,21 +2,149 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- GWI brand type: Faktum ---------- */
-@font-face { font-family: "Faktum"; font-weight: 400; font-style: normal; src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Regular.otf") format("opentype"); font-display: swap; }
-@font-face { font-family: "Faktum"; font-weight: 500; font-style: normal; src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Medium.otf") format("opentype"); font-display: swap; }
-@font-face { font-family: "Faktum"; font-weight: 600; font-style: normal; src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_SemiBold.otf") format("opentype"); font-display: swap; }
-@font-face { font-family: "Faktum"; font-weight: 700; font-style: normal; src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Bold.otf") format("opentype"); font-display: swap; }
-@font-face { font-family: "Faktum"; font-weight: 300; font-style: normal; src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Light.otf") format("opentype"); font-display: swap; }
+/* ============================================================
+   STATIC BASELINE — a snapshot of the real GWI design system
+   (github.com/ssiamptanis/gwi-design-system/colors_and_type.css)
+   at the time this app was built.
+
+   This is the fallback, not the source of truth: app/layout.tsx fetches
+   the LIVE version of this same file at request time and applies its
+   custom-property values as an inline style on <html>, which wins the
+   cascade over everything below. If that live fetch ever fails (GitHub
+   outage, network blip), the app keeps working and looking correct using
+   this snapshot instead of breaking. See lib/designSystem.ts.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+@font-face { font-family: "Faktum"; font-weight: 100; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Thin.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 100; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Thin_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 200; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_ExtraLight.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 200; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_ExtraLight_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 300; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Light.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 300; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Light_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 400; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Regular.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 400; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Regular_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 500; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Medium.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 500; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Medium_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 600; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_SemiBold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 600; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_SemiBold_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 700; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Bold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 700; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_Bold_Italic.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 800; font-style: normal;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_ExtraBold.otf") format("opentype"); font-display: swap; }
+@font-face { font-family: "Faktum"; font-weight: 800; font-style: italic;  src: url("https://raw.githubusercontent.com/ssiamptanis/gwi-design-system/main/fonts/Rene_Bieder_-_Faktum_ExtraBold_Italic.otf") format("opentype"); font-display: swap; }
+
+:root {
+  /* ============ FONT STACKS ============ */
+  --font-display: "Faktum", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-body:    "Faktum", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono:    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* ============ PRIMARY PALETTE ============ */
+  --c-hot-pink:            #FF0077;
+  --c-hot-pink-extra-dark: #B8275B;
+  --c-hot-pink-dark:       #DC1F69;
+  --c-hot-pink-2:          #FFD2DF;
+  --c-hot-pink-4:          #FF9FBD;
+  --c-hot-pink-5:          #FF80A9;
+  --c-hot-pink-6:          #FF5993;
+  --c-hot-pink-bg:         #FFE8EE;
+
+  --c-black:      #000000;
+  --c-off-black:  #101720;
+  --c-grey-8:     #2A3447;
+  --c-grey-7:     #526482;
+  --c-grey-6:     #7989A6;
+  --c-grey-5:     #ABB8CF;
+  --c-grey-4:     #CED9EB;
+  --c-grey-3:     #DFE7F5;
+  --c-grey-2:     #EBF1FB;
+  --c-grey-1:     #F7FAFF;
+  --c-white:      #FFFFFF;
+
+  /* ============ SECONDARY PALETTE ============ */
+  --c-violet-dark:   #333688;
+  --c-violet-medium: #5461C8;
+  --c-violet-light:  #9BA0E2;
+  --c-violet-bg:     #BFBFEF;
+
+  --c-blue-dark:   #003C71;
+  --c-blue-medium: #007CB6;
+  --c-blue-light:  #7BCCF1;
+  --c-blue-bg:     #B9E1F9;
+
+  --c-teal-dark:   #154B5B;
+  --c-teal-medium: #008291;
+  --c-teal-light:  #78D5E1;
+  --c-teal-bg:     #B9E9ED;
+
+  --c-purple-medium: #963CBD;
+
+  /* ============ ACCESSORY / NOTIFICATION ============ */
+  --c-action-green:  #00FF88;
+  --c-green-success: #008851;
+  --c-orange-medium: #DA3441;
+  --c-yellow-medium: #F6C26D;
+
+  /* ============ SEMANTIC TOKENS ============ */
+  --bg:            var(--c-white);
+  --bg-soft:       var(--c-grey-1);
+  --bg-muted:      var(--c-grey-2);
+  --bg-inverse:    var(--c-off-black);
+  --bg-brand:      var(--c-hot-pink);
+
+  --fg:            var(--c-off-black);
+  --fg-strong:     var(--c-black);
+  --fg-muted:      var(--c-grey-7);
+  --fg-subtle:     var(--c-grey-6);
+  --fg-on-brand:   var(--c-white);
+  --fg-on-inverse: var(--c-white);
+  --fg-link:       var(--c-hot-pink);
+
+  --border:         var(--c-grey-3);
+  --border-strong:  var(--c-grey-5);
+  --border-inverse:  var(--c-grey-8);
+
+  /* ============ TYPE SCALE ============ */
+  --fs-display-lg: 80px;
+  --fs-display-md: 60px;
+  --fs-h1: 50px;
+  --fs-h2: 36px;
+  --fs-h3: 26px;
+  --fs-h4: 24px;
+  --fs-h5: 20px;
+  --fs-body-1: 16px;
+  --fs-body-2: 14px;
+  --fs-body-3: 12px;
+
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
+
+  /* ============ RADII ============ */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 16px;
+  --r-2xl: 24px;
+  --r-card: 15px;
+}
 
 html, body {
-  font-family: "Faktum", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #101720;
-  background: #F7FAFF;
+  font-family: var(--font-body);
+  color: var(--fg);
+  background: var(--bg-soft);
 }
 
 * {
   box-sizing: border-box;
+}
+
+::selection {
+  background: var(--c-hot-pink-bg);
+  color: var(--c-hot-pink-extra-dark);
 }
 
 /* Print styles for exporting a deck to PDF via browser print */

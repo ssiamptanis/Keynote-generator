@@ -1,12 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { createSupabaseBrowserClient } from "@/lib/supabase/client";
+import { useLogoUrl } from "@/components/DesignSystemProvider";
 
 export default function TopNav({ email }: { email?: string }) {
   const router = useRouter();
+  const logoUrl = useLogoUrl("on-white");
 
   async function signOut() {
     const supabase = createSupabaseBrowserClient();
@@ -20,7 +21,8 @@ export default function TopNav({ email }: { email?: string }) {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
           <Link href="/library" className="flex items-center gap-3">
-            <Image src="/logos/gwi-logo-on-white.svg" alt="GWI" width={56} height={17} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoUrl} alt="GWI" width={56} height={17} />
             <span className="font-bold text-off-black text-sm">Keynote generator</span>
           </Link>
           <nav className="flex items-center gap-5 text-sm font-semibold text-grey-7">
